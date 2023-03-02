@@ -8,7 +8,7 @@
 
 const userWord = prompt('inserire una parola');
 
-let newArrayWord = userWord.split("");
+const newArrayWord = userWord.split("");
 
 console.log(newArrayWord)
 
@@ -25,8 +25,8 @@ function isItApalindrome(wordGen) {
     let newWord = "";
     const growWord = [];
     const downWord = [];
-
-    for (let i = 0; i < wordGen.lenght - 1; i++){
+    console.log(wordGen);
+    for (let i = 0; i < wordGen.length ; i++){
         
         let letterWord = wordGen[i];
         growWord.push(letterWord);
@@ -34,17 +34,18 @@ function isItApalindrome(wordGen) {
     }
     console.log(growWord);
 
-    for (let i = wordGen.lenght - 1; i > 0; i--) {
+    for (let i = wordGen.length - 1; i >= 0; i--) {
         let letterWord = wordGen[i];
         downWord.push(letterWord);
     }
     console.log(downWord);
 
-    if (growWord == downWord){
+    if (downWord == growWord) {
         newWord = "è un palindromo";
+        console.log(newWord)
     } else {
         newWord = "non è un palindromo";
     }
-    
+    console.log(newWord);
     return  newWord;
 }
