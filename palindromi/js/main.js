@@ -23,21 +23,22 @@ console.log(resultPalindrome);
 
 function isItApalindrome(wordGen) {
     let newWord = "";
-    let growWord = [''];
-    let downWord = [''];
+    const growWord = [];
+    const downWord = [];
 
     for (let i = 0; i < wordGen.lenght - 1; i++){
-        
-        growWord = wordGen[i].push([i]);
+        console.log(wordGen.lenght);
+        let letterWord = wordGen[i];
+        growWord.push(letterWord);
         
     }
-    console.log(growWord)
+    console.log(growWord);
 
-    for (let i = wordGen.lenght - 1; i >= 0; i--) {
+    for (let i = wordGen.lenght - 1; i > 0; i--) {
         
-        downWord = wordGen[i].push([i]);
+        downWord.push([i]);
     }
-    console.log(downWord)
+    console.log(downWord);
 
     if (growWord == downWord){
         newWord = "è un palindromo";
