@@ -27,7 +27,7 @@ function isItApalindrome(wordGen) {
     const downWord = [];
 
     for (let i = 0; i < wordGen.lenght - 1; i++){
-        console.log(wordGen.lenght);
+        
         let letterWord = wordGen[i];
         growWord.push(letterWord);
         
@@ -35,8 +35,8 @@ function isItApalindrome(wordGen) {
     console.log(growWord);
 
     for (let i = wordGen.lenght - 1; i > 0; i--) {
-        
-        downWord.push([i]);
+        let letterWord = wordGen[i];
+        downWord.push(letterWord);
     }
     console.log(downWord);
 
