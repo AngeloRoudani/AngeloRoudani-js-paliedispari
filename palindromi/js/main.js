@@ -33,7 +33,7 @@ function isItApalindrome(wordGen) {
     }
     console.log(growWord)
 
-    for (let i = ; i > wordGen.lenght -1; i--) {
+    for (let i = wordGen.lenght - 1; i >= 0; i--) {
         
         downWord = wordGen[i].push([i]);
     }
