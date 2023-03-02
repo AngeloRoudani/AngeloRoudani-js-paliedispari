@@ -23,17 +23,8 @@ console.log(resultPalindrome);
 
 function isItApalindrome(wordGen) {
     let newWord = "";
-    const growWord = [];
     const downWord = [];
     console.log(wordGen);
-    
-    for (let i = 0; i < wordGen.length ; i++){
-        
-        let letterWord = wordGen[i];
-        growWord.push(letterWord);
-        
-    }
-    console.log(growWord);
 
     for (let i = wordGen.length - 1; i >= 0; i--) {
         let letterWord = wordGen[i];
@@ -41,7 +32,7 @@ function isItApalindrome(wordGen) {
     }
     console.log(downWord);
 
-    if (downWord.toString() == growWord.toString()) {
+    if (downWord.toString() == wordGen.toString()) {
         newWord = "è un palindromo";
         console.log(newWord)
     } else {
